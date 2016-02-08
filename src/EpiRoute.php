@@ -138,7 +138,7 @@ class EpiRoute
       // Only echo the response if it's not null. 
       if (!is_null($response))
       {
-        $response = json_encode($response);
+        //$response = json_encode($response); //I can JSON encode my shit myself if I wanna
         if(isset($_GET['callback']))
           $response = "{$_GET['callback']}($response)";
         else
